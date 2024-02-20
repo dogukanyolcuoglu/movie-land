@@ -194,7 +194,6 @@
 			isa = PBXGroup;
 			children = (
 				109A4A0D2B84CDA900BBCB01 /* Splash.storyboard */,
-				109A4A0C2B84CD8F00BBCB01 /* Components */,
 				109A4A0B2B84CD8200BBCB01 /* Coordinator */,
 				109A4A0A2B84CD6D00BBCB01 /* Repository */,
 				109A4A072B84CD4F00BBCB01 /* ViewModels */,
@@ -250,13 +249,6 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		109A4A0C2B84CD8F00BBCB01 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
 		109A4A112B84D15D00BBCB01 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -308,7 +300,6 @@
 				109A4A3A2B84F36C00BBCB01 /* HomePage.storyboard */,
 				109A4A3E2B84F39200BBCB01 /* Coordinator */,
 				109A4A3D2B84F38700BBCB01 /* Repository */,
-				109A4A3C2B84F37200BBCB01 /* Components */,
 				109A4A392B84F36200BBCB01 /* ViewModels */,
 				109A4A382B84F35800BBCB01 /* ViewControllers */,
 			);
@@ -338,13 +329,6 @@
 				109A4A442B84F3CF00BBCB01 /* HomePageViewModel.swift */,
 			);
 			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		109A4A3C2B84F37200BBCB01 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 		109A4A3D2B84F38700BBCB01 /* Repository */ = {
