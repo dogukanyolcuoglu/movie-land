@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyCgKOwM-MZUhfcX7OFZPv6PJeoHO8vmonY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>831463862615</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.yolcuogludogukan.movie-land</string>
+	<key>PROJECT_ID</key>
+	<string>movie-land-lodos</string>
+	<key>STORAGE_BUCKET</key>
+	<string>movie-land-lodos.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:831463862615:ios:6d46dcb9ba33a9c282ce12</string>
+</dict>
+</plist>
