@@ -14,13 +14,6 @@
 		109A49EF2B84CA0B00BBCB01 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 109A49EE2B84CA0B00BBCB01 /* Moya */; };
 		109A49F12B84CA0B00BBCB01 /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 109A49F02B84CA0B00BBCB01 /* ReactiveMoya */; };
 		109A49F32B84CA0B00BBCB01 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 109A49F22B84CA0B00BBCB01 /* RxMoya */; };
-		109A49F62B84CBCB00BBCB01 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 109A49F52B84CBCB00BBCB01 /* FirebaseAnalytics */; };
-		109A49F82B84CBCB00BBCB01 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 109A49F72B84CBCB00BBCB01 /* FirebaseAppCheck */; };
-		109A49FA2B84CBFA00BBCB01 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 109A49F92B84CBFA00BBCB01 /* FirebaseAnalytics */; };
-		109A49FC2B84CBFA00BBCB01 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 109A49FB2B84CBFA00BBCB01 /* FirebaseAnalyticsOnDeviceConversion */; };
-		109A49FE2B84CBFA00BBCB01 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 109A49FD2B84CBFA00BBCB01 /* FirebaseAnalyticsSwift */; };
-		109A4A002B84CBFA00BBCB01 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 109A49FF2B84CBFA00BBCB01 /* FirebaseAnalyticsWithoutAdIdSupport */; };
-		109A4A022B84CBFA00BBCB01 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 109A4A012B84CBFA00BBCB01 /* FirebaseAppCheck */; };
 		109A4A042B84CCBD00BBCB01 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 109A4A032B84CCBD00BBCB01 /* GoogleService-Info.plist */; };
 		109A4A0E2B84CDA900BBCB01 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 109A4A0D2B84CDA900BBCB01 /* Splash.storyboard */; };
 		109A4A102B84D13400BBCB01 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109A4A0F2B84D13400BBCB01 /* AppCoordinator.swift */; };
@@ -49,9 +42,11 @@
 		109A4A4F2B84F8E200BBCB01 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109A4A4E2B84F8E200BBCB01 /* SplashViewModel.swift */; };
 		109A4A512B84FEDF00BBCB01 /* Array+add.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109A4A502B84FEDF00BBCB01 /* Array+add.swift */; };
 		109A4A532B84FF9E00BBCB01 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109A4A522B84FF9E00BBCB01 /* Images.swift */; };
+		ABCE452E5941741D58B487E9 /* Pods_movie_land.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F72C02847A1694D398396C /* Pods_movie_land.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B0859FF7A5FF158C3DE3992 /* Pods-movie-land.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movie-land.debug.xcconfig"; path = "Target Support Files/Pods-movie-land/Pods-movie-land.debug.xcconfig"; sourceTree = "<group>"; };
 		101ABA2D2B84C75C0032288F /* movie-land.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "movie-land.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		101ABA302B84C75C0032288F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		101ABA392B84C75D0032288F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,6 +79,8 @@
 		109A4A4E2B84F8E200BBCB01 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		109A4A502B84FEDF00BBCB01 /* Array+add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+add.swift"; sourceTree = "<group>"; };
 		109A4A522B84FF9E00BBCB01 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		1FEA794885CE5D4BCA6191C3 /* Pods-movie-land.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movie-land.release.xcconfig"; path = "Target Support Files/Pods-movie-land/Pods-movie-land.release.xcconfig"; sourceTree = "<group>"; };
+		75F72C02847A1694D398396C /* Pods_movie_land.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_movie_land.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,29 +88,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				109A49FE2B84CBFA00BBCB01 /* FirebaseAnalyticsSwift in Frameworks */,
-				109A4A002B84CBFA00BBCB01 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
-				109A49FA2B84CBFA00BBCB01 /* FirebaseAnalytics in Frameworks */,
 				109A49EF2B84CA0B00BBCB01 /* Moya in Frameworks */,
 				109A49ED2B84CA0B00BBCB01 /* CombineMoya in Frameworks */,
 				109A49F32B84CA0B00BBCB01 /* RxMoya in Frameworks */,
-				109A49F62B84CBCB00BBCB01 /* FirebaseAnalytics in Frameworks */,
-				109A49F82B84CBCB00BBCB01 /* FirebaseAppCheck in Frameworks */,
 				109A4A2B2B84DE5700BBCB01 /* KeychainAccess in Frameworks */,
 				109A49F12B84CA0B00BBCB01 /* ReactiveMoya in Frameworks */,
-				109A49FC2B84CBFA00BBCB01 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
-				109A4A022B84CBFA00BBCB01 /* FirebaseAppCheck in Frameworks */,
+				ABCE452E5941741D58B487E9 /* Pods_movie_land.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		023762CA542F1394361C46B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				75F72C02847A1694D398396C /* Pods_movie_land.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		101ABA242B84C75C0032288F = {
 			isa = PBXGroup;
 			children = (
 				101ABA2F2B84C75C0032288F /* movie-land */,
 				101ABA2E2B84C75C0032288F /* Products */,
+				26E4296FE0BD2FABEDB8221E /* Pods */,
+				023762CA542F1394361C46B1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -331,6 +332,16 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		26E4296FE0BD2FABEDB8221E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0B0859FF7A5FF158C3DE3992 /* Pods-movie-land.debug.xcconfig */,
+				1FEA794885CE5D4BCA6191C3 /* Pods-movie-land.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -338,9 +349,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 101ABA412B84C75D0032288F /* Build configuration list for PBXNativeTarget "movie-land" */;
 			buildPhases = (
+				7F7B6B7A6A4AD2758B32CA36 /* [CP] Check Pods Manifest.lock */,
 				101ABA292B84C75C0032288F /* Sources */,
 				101ABA2A2B84C75C0032288F /* Frameworks */,
 				101ABA2B2B84C75C0032288F /* Resources */,
+				5C5E7A0A68218DBD962F5142 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -352,13 +365,6 @@
 				109A49EE2B84CA0B00BBCB01 /* Moya */,
 				109A49F02B84CA0B00BBCB01 /* ReactiveMoya */,
 				109A49F22B84CA0B00BBCB01 /* RxMoya */,
-				109A49F52B84CBCB00BBCB01 /* FirebaseAnalytics */,
-				109A49F72B84CBCB00BBCB01 /* FirebaseAppCheck */,
-				109A49F92B84CBFA00BBCB01 /* FirebaseAnalytics */,
-				109A49FB2B84CBFA00BBCB01 /* FirebaseAnalyticsOnDeviceConversion */,
-				109A49FD2B84CBFA00BBCB01 /* FirebaseAnalyticsSwift */,
-				109A49FF2B84CBFA00BBCB01 /* FirebaseAnalyticsWithoutAdIdSupport */,
-				109A4A012B84CBFA00BBCB01 /* FirebaseAppCheck */,
 				109A4A2A2B84DE5700BBCB01 /* KeychainAccess */,
 			);
 			productName = "movie-land";
@@ -390,9 +396,8 @@
 			);
 			mainGroup = 101ABA242B84C75C0032288F;
 			packageReferences = (
-				109A49EB2B84CA0B00BBCB01 /* XCRemoteSwiftPackageReference "Moya" */,
-				109A49F42B84CBCA00BBCB01 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				109A4A292B84DE5700BBCB01 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				109A49EB2B84CA0B00BBCB01 /* XCRemoteSwiftPackageReference "Moya.git" */,
+				109A4A292B84DE5700BBCB01 /* XCRemoteSwiftPackageReference "KeychainAccess.git" */,
 			);
 			productRefGroup = 101ABA2E2B84C75C0032288F /* Products */;
 			projectDirPath = "";
@@ -417,6 +422,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5C5E7A0A68218DBD962F5142 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-movie-land/Pods-movie-land-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-movie-land/Pods-movie-land-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-movie-land/Pods-movie-land-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F7B6B7A6A4AD2758B32CA36 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-movie-land-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		101ABA292B84C75C0032288F /* Sources */ = {
@@ -581,6 +628,7 @@
 		};
 		101ABA422B84C75D0032288F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B0859FF7A5FF158C3DE3992 /* Pods-movie-land.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -610,6 +658,7 @@
 		};
 		101ABA432B84C75D0032288F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FEA794885CE5D4BCA6191C3 /* Pods-movie-land.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -661,7 +710,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		109A49EB2B84CA0B00BBCB01 /* XCRemoteSwiftPackageReference "Moya" */ = {
+		109A49EB2B84CA0B00BBCB01 /* XCRemoteSwiftPackageReference "Moya.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya.git";
 			requirement = {
@@ -669,15 +718,7 @@
 				minimumVersion = 15.0.3;
 			};
 		};
-		109A49F42B84CBCA00BBCB01 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-		109A4A292B84DE5700BBCB01 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+		109A4A292B84DE5700BBCB01 /* XCRemoteSwiftPackageReference "KeychainAccess.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
 			requirement = {
@@ -690,62 +731,27 @@
 /* Begin XCSwiftPackageProductDependency section */
 		109A49EC2B84CA0B00BBCB01 /* CombineMoya */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 109A49EB2B84CA0B00BBCB01 /* XCRemoteSwiftPackageReference "Moya" */;
+			package = 109A49EB2B84CA0B00BBCB01 /* XCRemoteSwiftPackageReference "Moya.git" */;
 			productName = CombineMoya;
 		};
 		109A49EE2B84CA0B00BBCB01 /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 109A49EB2B84CA0B00BBCB01 /* XCRemoteSwiftPackageReference "Moya" */;
+			package = 109A49EB2B84CA0B00BBCB01 /* XCRemoteSwiftPackageReference "Moya.git" */;
 			productName = Moya;
 		};
 		109A49F02B84CA0B00BBCB01 /* ReactiveMoya */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 109A49EB2B84CA0B00BBCB01 /* XCRemoteSwiftPackageReference "Moya" */;
+			package = 109A49EB2B84CA0B00BBCB01 /* XCRemoteSwiftPackageReference "Moya.git" */;
 			productName = ReactiveMoya;
 		};
 		109A49F22B84CA0B00BBCB01 /* RxMoya */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 109A49EB2B84CA0B00BBCB01 /* XCRemoteSwiftPackageReference "Moya" */;
+			package = 109A49EB2B84CA0B00BBCB01 /* XCRemoteSwiftPackageReference "Moya.git" */;
 			productName = RxMoya;
-		};
-		109A49F52B84CBCB00BBCB01 /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 109A49F42B84CBCA00BBCB01 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		109A49F72B84CBCB00BBCB01 /* FirebaseAppCheck */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 109A49F42B84CBCA00BBCB01 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAppCheck;
-		};
-		109A49F92B84CBFA00BBCB01 /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 109A49F42B84CBCA00BBCB01 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		109A49FB2B84CBFA00BBCB01 /* FirebaseAnalyticsOnDeviceConversion */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 109A49F42B84CBCA00BBCB01 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalyticsOnDeviceConversion;
-		};
-		109A49FD2B84CBFA00BBCB01 /* FirebaseAnalyticsSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 109A49F42B84CBCA00BBCB01 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalyticsSwift;
-		};
-		109A49FF2B84CBFA00BBCB01 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 109A49F42B84CBCA00BBCB01 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalyticsWithoutAdIdSupport;
-		};
-		109A4A012B84CBFA00BBCB01 /* FirebaseAppCheck */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 109A49F42B84CBCA00BBCB01 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAppCheck;
 		};
 		109A4A2A2B84DE5700BBCB01 /* KeychainAccess */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 109A4A292B84DE5700BBCB01 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			package = 109A4A292B84DE5700BBCB01 /* XCRemoteSwiftPackageReference "KeychainAccess.git" */;
 			productName = KeychainAccess;
 		};
 /* End XCSwiftPackageProductDependency section */
