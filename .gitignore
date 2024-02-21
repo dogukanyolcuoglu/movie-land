@@ -1,0 +1,69 @@
+# Xcode Project
+**/*.xcodeproj/xcuserdata/
+**/*.xcworkspace/xcuserdata/
+**/.swiftpm/xcode/xcuserdata/
+**/*.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+**/*.xcworkspace/xcshareddata/*.xccheckout
+**/*.xcworkspace/xcshareddata/*.xcscmblueprint
+**/*.playground/**/timeline.xctimeline
+.idea/
+
+# Various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+
+# Build
+**/.build/
+**/Build/
+DerivedData/
+*.ipa
+
+# Carthage
+Carthage/
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Accio dependency management
+Dependencies/
+.accio/
+
+# Obj-C/Swift specific
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+fastlane/sign&cert
+
+# CSV
+*.orig
+.svn
+
+# Other
+*~
+.DS_Store
+*.swp
+*.save
+._*
+*.bak
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
