@@ -38,7 +38,7 @@
 		109A4A302B84E4B700BBCB01 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109A4A2F2B84E4B700BBCB01 /* BaseViewController.swift */; };
 		109A4A332B84E4F500BBCB01 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109A4A322B84E4F500BBCB01 /* TabBarCoordinator.swift */; };
 		109A4A372B84F18200BBCB01 /* UIStoryboard+Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109A4A362B84F18200BBCB01 /* UIStoryboard+Storyboards.swift */; };
-		109A4A3B2B84F36C00BBCB01 /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 109A4A3A2B84F36C00BBCB01 /* HomePage.storyboard */; };
+		109A4A3B2B84F36C00BBCB01 /* Homepage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 109A4A3A2B84F36C00BBCB01 /* Homepage.storyboard */; };
 		109A4A402B84F3AC00BBCB01 /* HomePageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109A4A3F2B84F3AC00BBCB01 /* HomePageCoordinator.swift */; };
 		109A4A432B84F3BF00BBCB01 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109A4A422B84F3BF00BBCB01 /* HomePageViewController.swift */; };
 		109A4A452B84F3CF00BBCB01 /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109A4A442B84F3CF00BBCB01 /* HomePageViewModel.swift */; };
@@ -73,7 +73,7 @@
 		109A4A2F2B84E4B700BBCB01 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		109A4A322B84E4F500BBCB01 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		109A4A362B84F18200BBCB01 /* UIStoryboard+Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Storyboards.swift"; sourceTree = "<group>"; };
-		109A4A3A2B84F36C00BBCB01 /* HomePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
+		109A4A3A2B84F36C00BBCB01 /* Homepage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Homepage.storyboard; sourceTree = "<group>"; };
 		109A4A3F2B84F3AC00BBCB01 /* HomePageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageCoordinator.swift; sourceTree = "<group>"; };
 		109A4A422B84F3BF00BBCB01 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		109A4A442B84F3CF00BBCB01 /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
@@ -132,7 +132,7 @@
 				101ABA442B84C7820032288F /* Scenes */,
 				101ABA452B84C78A0032288F /* Common */,
 				101ABA462B84C7920032288F /* Services */,
-				101ABA472B84C79D0032288F /* SupportingFiles */,
+				101ABA472B84C79D0032288F /* Supporting Files */,
 			);
 			path = "movie-land";
 			sourceTree = "<group>";
@@ -154,7 +154,6 @@
 				109A4A1F2B84DB4E00BBCB01 /* Managers */,
 				109A4A172B84D1DC00BBCB01 /* Constants */,
 				109A4A112B84D15D00BBCB01 /* Protocols */,
-				109A4A082B84CD5D00BBCB01 /* Models */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -168,7 +167,7 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		101ABA472B84C79D0032288F /* SupportingFiles */ = {
+		101ABA472B84C79D0032288F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				101ABA392B84C75D0032288F /* Assets.xcassets */,
@@ -176,7 +175,7 @@
 				109A4A032B84CCBD00BBCB01 /* GoogleService-Info.plist */,
 				101ABA3E2B84C75D0032288F /* Info.plist */,
 			);
-			path = SupportingFiles;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		109A49EA2B84C98300BBCB01 /* Application */ = {
@@ -216,21 +215,6 @@
 				109A4A4E2B84F8E200BBCB01 /* SplashViewModel.swift */,
 			);
 			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		109A4A082B84CD5D00BBCB01 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				109A4A092B84CD6300BBCB01 /* Responses */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		109A4A092B84CD6300BBCB01 /* Responses */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Responses;
 			sourceTree = "<group>";
 		};
 		109A4A0A2B84CD6D00BBCB01 /* Repository */ = {
@@ -297,7 +281,7 @@
 		109A4A342B84E5A700BBCB01 /* HomePage Screen */ = {
 			isa = PBXGroup;
 			children = (
-				109A4A3A2B84F36C00BBCB01 /* HomePage.storyboard */,
+				109A4A3A2B84F36C00BBCB01 /* Homepage.storyboard */,
 				109A4A3E2B84F39200BBCB01 /* Coordinator */,
 				109A4A3D2B84F38700BBCB01 /* Repository */,
 				109A4A392B84F36200BBCB01 /* ViewModels */,
@@ -424,7 +408,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				109A4A3B2B84F36C00BBCB01 /* HomePage.storyboard in Resources */,
+				109A4A3B2B84F36C00BBCB01 /* Homepage.storyboard in Resources */,
 				101ABA3D2B84C75D0032288F /* LaunchScreen.storyboard in Resources */,
 				101ABA3A2B84C75D0032288F /* Assets.xcassets in Resources */,
 				109A4A042B84CCBD00BBCB01 /* GoogleService-Info.plist in Resources */,
@@ -604,11 +588,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VTU49DY9F4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "movie-land/Info.plist";
+				INFOPLIST_FILE = "movie-land/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "movie-land";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -633,11 +617,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VTU49DY9F4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "movie-land/Info.plist";
+				INFOPLIST_FILE = "movie-land/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "movie-land";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

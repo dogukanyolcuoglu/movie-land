@@ -12,10 +12,8 @@ class AppCoordinator: Coordinator {
     
     //MARK: - Variables
     var window: UIWindow?
-    
     let rootViewController: UIViewController = UIStoryboard(storyboard: .splash).instantiateInitialViewController()!
-    var tabbarCoordinator: TabbarCoordinator!
-    
+    var splashCoordinator: SplashCoordinator!
     
     //MARK: - Coordinator
     init(window: UIWindow?) {
@@ -23,10 +21,10 @@ class AppCoordinator: Coordinator {
     }
     
     override func start() {
-        guard let window = window else {
-            return
-        }
+        guard let window = window else { return }
         window.rootViewController = rootViewController
+        self.splashCoordinator = SplashCoordinator(window: window)
+        self.splashCoordinator.start()
         window.makeKeyAndVisible()
     }
     

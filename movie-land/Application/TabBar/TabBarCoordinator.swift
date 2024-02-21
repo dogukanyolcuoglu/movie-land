@@ -30,6 +30,7 @@ class TabbarCoordinator: Coordinator {
     override func start() {
         tabbarController.coordinator = self
         homePageCoordinator.start()
+        switchRoot()
     }
     
     private func setSelectedTab(_ tab: Tab) {
@@ -40,4 +41,7 @@ class TabbarCoordinator: Coordinator {
 
     }
     
+    @objc private func switchRoot() {
+//        window?.switchRootViewController(rootViewController: tabbarController, animated: true, completion: nil)
+    }
 }
