@@ -12,4 +12,5 @@ target 'movie-land' do
   pod 'FirebaseRemoteConfig'
   pod 'FirebaseAnalytics'
   pod 'FirebaseDatabase'
+  pod 'lottie-ios'
 end

@@ -42,6 +42,6 @@ class TabbarCoordinator: Coordinator {
     }
     
     @objc private func switchRoot() {
-//        window?.switchRootViewController(rootViewController: tabbarController, animated: true, completion: nil)
+        window?.switchRootViewController(rootViewController: tabbarController, animated: true, completion: nil)
     }
 }

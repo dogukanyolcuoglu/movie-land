@@ -10,6 +10,8 @@
 		101ABA312B84C75C0032288F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101ABA302B84C75C0032288F /* AppDelegate.swift */; };
 		101ABA3A2B84C75D0032288F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 101ABA392B84C75D0032288F /* Assets.xcassets */; };
 		101ABA3D2B84C75D0032288F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 101ABA3B2B84C75D0032288F /* LaunchScreen.storyboard */; };
+		10383C0E2B86245C007334D8 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10383C0D2B86245C007334D8 /* LoadingView.swift */; };
+		10383C102B8624D4007334D8 /* animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 10383C0F2B8624D4007334D8 /* animation.json */; };
 		109A49ED2B84CA0B00BBCB01 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 109A49EC2B84CA0B00BBCB01 /* CombineMoya */; };
 		109A49EF2B84CA0B00BBCB01 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 109A49EE2B84CA0B00BBCB01 /* Moya */; };
 		109A49F12B84CA0B00BBCB01 /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 109A49F02B84CA0B00BBCB01 /* ReactiveMoya */; };
@@ -42,6 +44,7 @@
 		109A4A4F2B84F8E200BBCB01 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109A4A4E2B84F8E200BBCB01 /* SplashViewModel.swift */; };
 		109A4A512B84FEDF00BBCB01 /* Array+add.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109A4A502B84FEDF00BBCB01 /* Array+add.swift */; };
 		109A4A532B84FF9E00BBCB01 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109A4A522B84FF9E00BBCB01 /* Images.swift */; };
+		10AA9B482B861CE40086D7F0 /* UIWindow+ChangeRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AA9B472B861CE40086D7F0 /* UIWindow+ChangeRootView.swift */; };
 		ABCE452E5941741D58B487E9 /* Pods_movie_land.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F72C02847A1694D398396C /* Pods_movie_land.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +55,8 @@
 		101ABA392B84C75D0032288F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		101ABA3C2B84C75D0032288F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		101ABA3E2B84C75D0032288F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10383C0D2B86245C007334D8 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		10383C0F2B8624D4007334D8 /* animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animation.json; sourceTree = "<group>"; };
 		109A4A032B84CCBD00BBCB01 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		109A4A0D2B84CDA900BBCB01 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		109A4A0F2B84D13400BBCB01 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -79,6 +84,7 @@
 		109A4A4E2B84F8E200BBCB01 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		109A4A502B84FEDF00BBCB01 /* Array+add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+add.swift"; sourceTree = "<group>"; };
 		109A4A522B84FF9E00BBCB01 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		10AA9B472B861CE40086D7F0 /* UIWindow+ChangeRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+ChangeRootView.swift"; sourceTree = "<group>"; };
 		1FEA794885CE5D4BCA6191C3 /* Pods-movie-land.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movie-land.release.xcconfig"; path = "Target Support Files/Pods-movie-land/Pods-movie-land.release.xcconfig"; sourceTree = "<group>"; };
 		75F72C02847A1694D398396C /* Pods_movie_land.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_movie_land.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -150,6 +156,7 @@
 		101ABA452B84C78A0032288F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				10383C0B2B862441007334D8 /* Views */,
 				109A4A352B84F16300BBCB01 /* Extensions */,
 				109A4A242B84DC2900BBCB01 /* Enums */,
 				109A4A1F2B84DB4E00BBCB01 /* Managers */,
@@ -177,6 +184,23 @@
 				101ABA3E2B84C75D0032288F /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		10383C0B2B862441007334D8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				10383C0C2B862448007334D8 /* Loading View */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		10383C0C2B862448007334D8 /* Loading View */ = {
+			isa = PBXGroup;
+			children = (
+				10383C0D2B86245C007334D8 /* LoadingView.swift */,
+				10383C0F2B8624D4007334D8 /* animation.json */,
+			);
+			path = "Loading View";
 			sourceTree = "<group>";
 		};
 		109A49EA2B84C98300BBCB01 /* Application */ = {
@@ -296,6 +320,7 @@
 			children = (
 				109A4A362B84F18200BBCB01 /* UIStoryboard+Storyboards.swift */,
 				109A4A502B84FEDF00BBCB01 /* Array+add.swift */,
+				10AA9B472B861CE40086D7F0 /* UIWindow+ChangeRootView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -338,7 +363,6 @@
 				0B0859FF7A5FF158C3DE3992 /* Pods-movie-land.debug.xcconfig */,
 				1FEA794885CE5D4BCA6191C3 /* Pods-movie-land.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -396,8 +420,8 @@
 			);
 			mainGroup = 101ABA242B84C75C0032288F;
 			packageReferences = (
-				109A49EB2B84CA0B00BBCB01 /* XCRemoteSwiftPackageReference "Moya.git" */,
-				109A4A292B84DE5700BBCB01 /* XCRemoteSwiftPackageReference "KeychainAccess.git" */,
+				109A49EB2B84CA0B00BBCB01 /* XCRemoteSwiftPackageReference "Moya" */,
+				109A4A292B84DE5700BBCB01 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 			);
 			productRefGroup = 101ABA2E2B84C75C0032288F /* Products */;
 			projectDirPath = "";
@@ -417,6 +441,7 @@
 				101ABA3D2B84C75D0032288F /* LaunchScreen.storyboard in Resources */,
 				101ABA3A2B84C75D0032288F /* Assets.xcassets in Resources */,
 				109A4A042B84CCBD00BBCB01 /* GoogleService-Info.plist in Resources */,
+				10383C102B8624D4007334D8 /* animation.json in Resources */,
 				109A4A0E2B84CDA900BBCB01 /* Splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -470,6 +495,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10AA9B482B861CE40086D7F0 /* UIWindow+ChangeRootView.swift in Sources */,
 				109A4A4D2B84F8CB00BBCB01 /* SplashRepository.swift in Sources */,
 				109A4A302B84E4B700BBCB01 /* BaseViewController.swift in Sources */,
 				109A4A282B84DC7600BBCB01 /* AuthNotificationName.swift in Sources */,
@@ -477,6 +503,7 @@
 				109A4A162B84D1B300BBCB01 /* StoryboardIdentifiable.swift in Sources */,
 				109A4A212B84DB5B00BBCB01 /* TokenManager.swift in Sources */,
 				109A4A472B84F7EE00BBCB01 /* HomePageRepository.swift in Sources */,
+				10383C0E2B86245C007334D8 /* LoadingView.swift in Sources */,
 				109A4A1E2B84DAF300BBCB01 /* Texts.swift in Sources */,
 				109A4A1B2B84DA5200BBCB01 /* APIRouter.swift in Sources */,
 				109A4A262B84DC3D00BBCB01 /* NetworkingError.swift in Sources */,
@@ -710,7 +737,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		109A49EB2B84CA0B00BBCB01 /* XCRemoteSwiftPackageReference "Moya.git" */ = {
+		109A49EB2B84CA0B00BBCB01 /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya.git";
 			requirement = {
@@ -718,7 +745,7 @@
 				minimumVersion = 15.0.3;
 			};
 		};
-		109A4A292B84DE5700BBCB01 /* XCRemoteSwiftPackageReference "KeychainAccess.git" */ = {
+		109A4A292B84DE5700BBCB01 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
 			requirement = {
@@ -731,27 +758,27 @@
 /* Begin XCSwiftPackageProductDependency section */
 		109A49EC2B84CA0B00BBCB01 /* CombineMoya */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 109A49EB2B84CA0B00BBCB01 /* XCRemoteSwiftPackageReference "Moya.git" */;
+			package = 109A49EB2B84CA0B00BBCB01 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = CombineMoya;
 		};
 		109A49EE2B84CA0B00BBCB01 /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 109A49EB2B84CA0B00BBCB01 /* XCRemoteSwiftPackageReference "Moya.git" */;
+			package = 109A49EB2B84CA0B00BBCB01 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
 		};
 		109A49F02B84CA0B00BBCB01 /* ReactiveMoya */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 109A49EB2B84CA0B00BBCB01 /* XCRemoteSwiftPackageReference "Moya.git" */;
+			package = 109A49EB2B84CA0B00BBCB01 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = ReactiveMoya;
 		};
 		109A49F22B84CA0B00BBCB01 /* RxMoya */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 109A49EB2B84CA0B00BBCB01 /* XCRemoteSwiftPackageReference "Moya.git" */;
+			package = 109A49EB2B84CA0B00BBCB01 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = RxMoya;
 		};
 		109A4A2A2B84DE5700BBCB01 /* KeychainAccess */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 109A4A292B84DE5700BBCB01 /* XCRemoteSwiftPackageReference "KeychainAccess.git" */;
+			package = 109A4A292B84DE5700BBCB01 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
 			productName = KeychainAccess;
 		};
 /* End XCSwiftPackageProductDependency section */
