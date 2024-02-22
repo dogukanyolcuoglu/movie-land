@@ -9,11 +9,10 @@ import Foundation
 import UIKit
 import Moya
 
-final class RAPIClient {
+final class APIClient {
     
     var provider = MoyaProvider<APIRouter>()
-    
-    static var shared = RAPIClient()
+    static var shared = APIClient()
     
     private var unauthorizedNotification = Foundation.Notification(name: .didReceive401)
     
@@ -21,9 +20,9 @@ final class RAPIClient {
         provider.request(target) { [weak self] (result) in
             guard let self = self else { return }
             switch result {
-            case let .success(response):
-                let httpResponse = response.response
-                self.handleResponseData(data: response.data, response: httpResponse, completion: completion)
+            case let .success(request):
+                let httpResponse = request.response
+                self.handleResponseData(data: request.data, response: request.response, completion: completion)
             case let .failure(error):
                 completion(.failure(NetworkingError.moyaError(error)))
             }
@@ -38,11 +37,19 @@ final class RAPIClient {
         guard let data = data else {
             return completion(.failure(NetworkingError.unknown))
         }
+        
+        
+        print("Request -> \(response.url!.absoluteString.utf8)")
+        
+        if let responseText = String(data: data, encoding: .utf8) {
+            if responseText.count < 500000 {
+                print("Response -> \(responseText) \n")
+            }
+        }
 
         switch response.statusCode {
         case 200...299:
             do {
-                print("\(T.self) result:",try JSONSerialization.jsonObject(with: data, options: []))
                 let results = try JSONDecoder().decode(T.self, from: data)
                 completion(.success(results))
             } catch let error {
@@ -51,6 +58,7 @@ final class RAPIClient {
         case 401:
             NotificationCenter.default.post(unauthorizedNotification)
         default:
+            print("Error code: \(response.statusCode)")
             return completion(.failure(NetworkingError.unknown))
         }
     }

@@ -12,7 +12,7 @@ struct Texts {
     struct Enviroment {
         static let baseURL = URL(string: "https://movies-api14.p.rapidapi.com")!
         static let apiKey = "3df9510d5emsh02b60408a2e095bp1e4444jsn30ebc32c0cf8"
-        static let urlString = "https://movies-api14.p.rapidapi.com"
+        static let host = "movies-api14.p.rapidapi.com"
     }
     
     struct TabBarTitle {

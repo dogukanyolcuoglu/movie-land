@@ -11,7 +11,7 @@ import Moya
 enum APIRouter {
     case getMovies
     case getMovieById(stringId: String)
-    case getHomePageMovie
+    case getHomeMovies
 }
 
 extension APIRouter: TargetType {
@@ -26,28 +26,28 @@ extension APIRouter: TargetType {
             return "/movies"
         case .getMovieById(let stringId):
             return "/movie/\(stringId)"
-        case .getHomePageMovie:
+        case .getHomeMovies:
             return "/home"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .getMovies, .getMovieById, .getHomePageMovie:
+        case .getMovies, .getMovieById, .getHomeMovies:
             return .get
         }
     }
     
     var parameters: [String: Any]? {
         switch self {
-        case .getMovies, .getMovieById, .getHomePageMovie:
+        case .getMovies, .getMovieById, .getHomeMovies:
             return [:]
         }
     }
     
     var task: Task {
         switch self {
-        case .getMovies, .getHomePageMovie:
+        case .getMovies, .getHomeMovies:
             return .requestPlain
         case .getMovieById:
             return .requestParameters(parameters: parameters!, encoding: URLEncoding.default)
@@ -55,9 +55,9 @@ extension APIRouter: TargetType {
     }
     
     var headers: [String : String]? {
-        var assigned: [String: String] = [
-            "X-RapidAPI-Key": Texts.Enviroment.apiKey,
-            "X-RapidAPI-Host": Texts.Enviroment.urlString,
+        let assigned: [String: String] = [
+            "X-RapidAPI-Key" : Texts.Enviroment.apiKey,
+            "X-RapidAPI-Host": Texts.Enviroment.host,
         ]
        return assigned
     }

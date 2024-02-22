@@ -14,9 +14,16 @@ class HomePageViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+    }
+    
+    func setup() {
+        viewModel.delegate = self
+        viewModel.getMovies()
+        viewModel.getHomeMovies()
     }
 }
