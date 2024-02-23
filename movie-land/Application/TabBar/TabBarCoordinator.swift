@@ -21,7 +21,8 @@ class TabbarCoordinator: Coordinator {
     
     // MARK:- Coordinators
     lazy var homePageCoordinator = HomePageCoordinator(rootViewController: tabbarController)
-    
+    lazy var profileCoordinator = ProfileCoordinator(rootViewController: tabbarController)
+
     init(window: UIWindow) {
         self.window = window
         self.tabbarController = TabBarController()
@@ -30,6 +31,7 @@ class TabbarCoordinator: Coordinator {
     override func start() {
         tabbarController.coordinator = self
         homePageCoordinator.start()
+        profileCoordinator.start()
         switchRoot()
     }
     

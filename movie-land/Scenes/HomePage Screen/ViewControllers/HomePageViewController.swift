@@ -5,15 +5,18 @@
 //  Created by Dogukan Yolcuoglu on 20.02.2024.
 //
 
-import Foundation
+import UIKit
 
 class HomePageViewController: BaseViewController {
+    
+    @IBOutlet weak var collectionView: UICollectionView!
     
     var viewModel: HomePageViewModel!
     var coordinator: HomePageCoordinator!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionViewSetup()
         setup()
     }
     
@@ -23,7 +26,8 @@ class HomePageViewController: BaseViewController {
     
     func setup() {
         viewModel.delegate = self
-        viewModel.getMovies()
         viewModel.getHomeMovies()
+        viewModel.getMovies()
+        viewModel.start()
     }
 }

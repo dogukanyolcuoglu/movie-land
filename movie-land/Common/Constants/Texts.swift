@@ -17,6 +17,7 @@ struct Texts {
     
     struct TabBarTitle {
         static let homePage = "Anasayfa"
+        static let profile = "Profil"
     }
     
     struct InternetConnection {

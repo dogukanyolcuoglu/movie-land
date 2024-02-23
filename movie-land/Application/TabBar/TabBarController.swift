@@ -29,11 +29,17 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     private func setupAppearance() {
         self.delegate = self
         tabBar.barTintColor = .white
-        tabBar.unselectedItemTintColor = .gray
-        tabBar.tintColor = .red
+        tabBar.unselectedItemTintColor =  .black
+        tabBar.tintColor = Colors.TabBarColors.heavyRedColor
         tabBar.shadowImage = UIImage()
         tabBar.backgroundImage = UIImage()
         tabBar.backgroundColor = .white
+        
+        tabBar.layer.shadowOffset = CGSize(width: 0, height: 0)
+        tabBar.layer.shadowRadius = 2
+        tabBar.layer.shadowColor = UIColor.black.cgColor
+        tabBar.layer.shadowOpacity = 0.3
+        
         self.configureTabBarItem()
     }
     
@@ -44,7 +50,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
             .font: UIFont.systemFont(ofSize: 11),
         ]
         
-        tabBarItemAppearance.badgeColor = .red
+        tabBarItemAppearance.badgeColor = Colors.TabBarColors.heavyRedColor
         tabBarItemAppearance.setBadgeTextAttributes(titleAttributes, for: .normal)
         tabBarItemAppearance.setBadgeTextAttributes(titleAttributes, for: .selected)
         tabBarItemAppearance.setTitleTextAttributes(titleAttributes, for: .normal)

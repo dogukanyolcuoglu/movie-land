@@ -9,16 +9,9 @@ import Foundation
 
 extension HomePageViewController: HomePageViewModelDelegate {
     
-    func getMoviesData(data: MoviesResponse) {
-        print("Success movies data")
-    }
-    
-    func getHomeMoviesData(data: HomeMoviesResponse) {
-        print("Success home movies data")
-    }
-    
-    func didLoad() {
-        
+    func updated() {
+        collectionView.reloadData()
+        print("updated ...")
     }
     
 }

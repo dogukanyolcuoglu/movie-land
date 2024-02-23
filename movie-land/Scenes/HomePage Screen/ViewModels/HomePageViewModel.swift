@@ -9,9 +9,7 @@ import Foundation
 import UIKit
 
 protocol HomePageViewModelDelegate: AnyObject {
-    func getMoviesData(data: MoviesResponse)
-    func getHomeMoviesData(data: HomeMoviesResponse)
-    func didLoad()
+    func updated()
 }
 
 final class HomePageViewModel: NSObject {
@@ -19,6 +17,7 @@ final class HomePageViewModel: NSObject {
     var repository: HomePageRepository!
     weak var delegate: HomePageViewModelDelegate?
     private var dispatchGroup = DispatchGroup()
+    var sections = [ListSection]()
     
     init(repository: HomePageRepository) {
         self.repository = repository
@@ -26,7 +25,10 @@ final class HomePageViewModel: NSObject {
     
     func start() {
         dispatchGroup.notify(queue: .main) {
-            self.delegate?.didLoad()
+            self.sections = self.sections.sorted { lhs, rhs in
+                return lhs.priority < rhs.priority
+            }
+            self.delegate?.updated()
         }
     }
     
@@ -36,7 +38,8 @@ final class HomePageViewModel: NSObject {
             self?.dispatchGroup.leave()
             switch result {
             case .success(let response):
-                self?.delegate?.getMoviesData(data: response)
+                let items = response.movies.map({ ListItem(title: $0.originalTitle, releaseDate: $0.releaseDate, image: $0.backdropPath)})
+                self?.sections.append(.allMovies(items: items))
             case .failure(let error):
                 print("error: \(error)")
             }
@@ -49,7 +52,9 @@ final class HomePageViewModel: NSObject {
             self?.dispatchGroup.leave()
             switch result {
             case .success(let response):
-                self?.delegate?.getHomeMoviesData(data: response)
+                let firstItem = response.first(where: { $0.title.uppercased() == "Trending Movies".uppercased() })
+                let items = firstItem?.movies.map({ ListItem(title: $0.originalTitle, releaseDate: $0.releaseDate ?? "", image: $0.backdropPath)}).prefix(10)
+                self?.sections.append(.topMovies(items: Array(items ?? [])))
             case .failure(let error):
                 print("error: \(error)")
             }

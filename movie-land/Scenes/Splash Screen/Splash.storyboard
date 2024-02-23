@@ -70,4 +70,7 @@
             <point key="canvasLocation" x="-170.22900763358777" y="1.4084507042253522"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="VK0-e1-bVo"/>
+    </designables>
 </document>
