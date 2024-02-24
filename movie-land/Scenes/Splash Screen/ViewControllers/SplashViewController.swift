@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import Lottie
 import FirebaseRemoteConfig
+import Signals
 
 class SplashViewController: BaseViewController {
     
@@ -24,15 +25,33 @@ class SplashViewController: BaseViewController {
         super.viewDidLoad()
         animationView.play()
         animationView.loopMode = .loop
-        viewModel.firebaseConfig { (title) in
-            self.companyNameLabel.text = title
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                self.coordinator.goToDashBoardPage()
-            }
-        }
+        configure()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+    }
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        noInternetSucject.cancelSubscription(for: self)
+    }
+    
+    deinit {
+        noInternetSucject.cancelSubscription(for: self)
+    }
+    
+    func configure() {
+        self.noInternetSucject.subscribe(with: self) { [weak self] (data) in
+            if data {
+                self?.viewModel.firebaseConfig { (title) in
+                    self?.companyNameLabel.text = title
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                        self?.coordinator.goToDashBoardPage()
+                    }
+                }
+            }
+        }
     }
 }

@@ -9,9 +9,9 @@ import Foundation
 import Moya
 
 enum APIRouter {
-    case getMovies
     case getMovieById(stringId: String)
     case getHomeMovies
+    case searchByMovieNames(name: String)
 }
 
 extension APIRouter: TargetType {
@@ -22,35 +22,41 @@ extension APIRouter: TargetType {
     
     var path: String {
         switch self {
-        case .getMovies:
-            return "/movies"
         case .getMovieById(let stringId):
             return "/movie/\(stringId)"
         case .getHomeMovies:
             return "/home"
+        case .searchByMovieNames:
+            return "/search"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .getMovies, .getMovieById, .getHomeMovies:
+        case .getMovieById, .getHomeMovies, .searchByMovieNames:
             return .get
         }
     }
     
     var parameters: [String: Any]? {
         switch self {
-        case .getMovies, .getMovieById, .getHomeMovies:
+        case .getHomeMovies:
             return [:]
+        case .searchByMovieNames(let name):
+            let params = ["query": name]
+            return params
+        case .getMovieById(let id):
+            let params = ["id": id]
+            return params
         }
     }
     
     var task: Task {
         switch self {
-        case .getMovies, .getHomeMovies:
+        case .getHomeMovies:
             return .requestPlain
-        case .getMovieById:
-            return .requestParameters(parameters: parameters!, encoding: URLEncoding.default)
+        case .getMovieById, .searchByMovieNames:
+            return .requestParameters(parameters: parameters!, encoding: URLEncoding.queryString)
         }
     }
     

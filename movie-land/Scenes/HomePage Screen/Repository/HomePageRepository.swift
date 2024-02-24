@@ -10,12 +10,11 @@ import Moya
 
 final class HomePageRepository {
     
-    func getMovies(completion: @escaping (Result<MoviesResponse, NetworkingError>) -> ()) {
-        APIClient.shared.request(target: .getMovies, completion: completion)
-    }
-    
     func getHomeMovies(completion: @escaping (Result<HomeMoviesResponse, NetworkingError>) -> ()) {
         APIClient.shared.request(target: .getHomeMovies, completion: completion)
     }
     
+    func getSearchMovies(searchKey: String, completion: @escaping (Result<SearchMoviesResponse, NetworkingError>) -> ()) {
+        APIClient.shared.request(target: .searchByMovieNames(name: searchKey), completion: completion)
+    }
 }

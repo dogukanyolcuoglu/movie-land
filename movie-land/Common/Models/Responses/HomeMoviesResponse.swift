@@ -9,21 +9,21 @@
 import Foundation
 
 // MARK: - HomeMoviesResponseElement
-struct HomeMoviesResponseElement: Codable {
-    let title: String
-    let movies: [HomeMovie]
+struct HomeMoviesResponseData: Codable {
+    let title: String?
+    let movies: [HomeMovie]?
 }
 
 // MARK: - Movie
 struct HomeMovie: Codable {
     let id: Int
-    let backdropPath: String
-    let genres: [Genre]
-    let originalTitle, overview: String
-    let posterPath: String
+    let backdropPath: String?
+    let genres: [Genre]?
+    let originalTitle, overview: String?
+    let posterPath: String?
     let releaseDate: String?
-    let title: String
-    let contentType: ContentType
+    let title: String?
+    let contentType: ContentType?
     let firstAired: String?
 
     enum CodingKeys: String, CodingKey {
@@ -64,4 +64,4 @@ enum Genre: String, Codable {
     case war = "War"
 }
 
-typealias HomeMoviesResponse = [HomeMoviesResponseElement]
+typealias HomeMoviesResponse = [HomeMoviesResponseData]

@@ -19,6 +19,15 @@
       }
     },
     {
+      "identity" : "kingfisher",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/onevcat/Kingfisher.git",
+      "state" : {
+        "revision" : "5b92f029fab2cce44386d28588098b5be0824ef5",
+        "version" : "7.11.0"
+      }
+    },
+    {
       "identity" : "moya",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Moya/Moya.git",
@@ -43,6 +52,24 @@
       "state" : {
         "revision" : "9dcaa4b333db437b0fbfaf453fad29069044a8b4",
         "version" : "6.6.0"
+      }
+    },
+    {
+      "identity" : "signals",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/artman/Signals",
+      "state" : {
+        "revision" : "e792eb51a64f85d043d17f09f6323b803b9f73b8",
+        "version" : "6.1.0"
+      }
+    },
+    {
+      "identity" : "snapkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SnapKit/SnapKit.git",
+      "state" : {
+        "revision" : "2842e6e84e82eb9a8dac0100ca90d9444b0307f4",
+        "version" : "5.7.1"
       }
     }
   ],

@@ -29,7 +29,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     private func setupAppearance() {
         self.delegate = self
         tabBar.barTintColor = .white
-        tabBar.unselectedItemTintColor =  .black
+        tabBar.unselectedItemTintColor = .black
         tabBar.tintColor = Colors.TabBarColors.heavyRedColor
         tabBar.shadowImage = UIImage()
         tabBar.backgroundImage = UIImage()

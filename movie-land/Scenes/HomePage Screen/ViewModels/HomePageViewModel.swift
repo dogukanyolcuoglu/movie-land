@@ -10,54 +10,69 @@ import UIKit
 
 protocol HomePageViewModelDelegate: AnyObject {
     func updated()
+    func didFinishError()
 }
 
 final class HomePageViewModel: NSObject {
     
-    var repository: HomePageRepository!
+    private var repository: HomePageRepository!
     weak var delegate: HomePageViewModelDelegate?
-    private var dispatchGroup = DispatchGroup()
-    var sections = [ListSection]()
+    var sections = [HomePageSectionModel]()
     
     init(repository: HomePageRepository) {
         self.repository = repository
     }
-    
-    func start() {
-        dispatchGroup.notify(queue: .main) {
-            self.sections = self.sections.sorted { lhs, rhs in
-                return lhs.priority < rhs.priority
-            }
-            self.delegate?.updated()
-        }
-    }
-    
-    func getMovies() {
-        dispatchGroup.enter()
-        repository.getMovies { [weak self] (result) in
-            self?.dispatchGroup.leave()
-            switch result {
-            case .success(let response):
-                let items = response.movies.map({ ListItem(title: $0.originalTitle, releaseDate: $0.releaseDate, image: $0.backdropPath)})
-                self?.sections.append(.allMovies(items: items))
-            case .failure(let error):
-                print("error: \(error)")
-            }
-        }
-    }
-    
+
     func getHomeMovies() {
-        self.dispatchGroup.enter()
+        LoadingView.shared.showLoaderView()
         repository.getHomeMovies { [weak self] (result) in
-            self?.dispatchGroup.leave()
             switch result {
             case .success(let response):
-                let firstItem = response.first(where: { $0.title.uppercased() == "Trending Movies".uppercased() })
-                let items = firstItem?.movies.map({ ListItem(title: $0.originalTitle, releaseDate: $0.releaseDate ?? "", image: $0.backdropPath)}).prefix(10)
-                self?.sections.append(.topMovies(items: Array(items ?? [])))
+                self?.sections = []
+                self?.sections = self?.homeMoviesItems(response) ?? []
+                self?.delegate?.updated()
             case .failure(let error):
+                self?.delegate?.didFinishError()
+                self?.sections = []
                 print("error: \(error)")
             }
         }
+    }
+    
+    func getSearchMovies(searchKey: String) {
+        repository.getSearchMovies(searchKey: searchKey) { [weak self] (result) in
+            switch result {
+            case .success(let response):
+                self?.sections = []
+                self?.sections = self?.searchMoviesItems(response.contents ?? []) ?? []
+                self?.delegate?.updated()
+            case .failure(let error):
+                self?.delegate?.didFinishError()
+                self?.sections = [.EmptySection(items: [.EmptySectionItem])]
+                print("error: \(error)")
+            }
+        }
+    }
+    
+    func homeMoviesItems(_ data: [HomeMoviesResponseData]) -> [HomePageSectionModel] {
+        var sections = [HomePageSectionModel]()
+        data.forEach { (responseData) in
+            var items = [HomePageSectionModelItem]()
+            responseData.movies?.forEach({ (movie) in
+                items.append(.AllMoviesItem(data: HomeMovieItem(id: movie.id, image: movie.backdropPath ?? "")))
+            })
+            sections.append(.AllMoviesSection(title: responseData.title ?? "", items: items))
+        }
+        return sections
+    }
+    
+    func searchMoviesItems(_ data: [SearchContent]) -> [HomePageSectionModel] {
+        var section = [HomePageSectionModel]()
+        var items = [HomePageSectionModelItem]()
+        data.forEach { (content) in
+            items.append(.SearchMoviesItem(data: HomeMovieItem(id: content.id, image: content.backdropPath ?? "")))
+        }
+        section.append(.SearchMoviesSection(items: items))
+        return section
     }
 }

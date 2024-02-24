@@ -18,7 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
+        setupTabeView()
         startApp()
+        setupNavigationBar()
         return true
     }
 
@@ -28,5 +30,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         appCoordinator.start()
     }
 
+    private func setupTabeView() {
+        if #available(iOS 15.0, *) {
+           UITableView.appearance().sectionHeaderTopPadding = 0
+        }
+    }
+    
+    func setupNavigationBar() {
+        if #available(iOS 15, *) {
+            let navigationBarAppearance = UINavigationBarAppearance()
+             navigationBarAppearance.configureWithOpaqueBackground()
+             navigationBarAppearance.titleTextAttributes = [
+                NSAttributedString.Key.foregroundColor : Colors.TabBarColors.heavyRedColor,
+                NSAttributedString.Key.font : UIFont.systemFont(ofSize: 21, weight: .bold)
+             ]
+             UINavigationBar.appearance().standardAppearance = navigationBarAppearance
+             UINavigationBar.appearance().compactAppearance = navigationBarAppearance
+             UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
+        }
+    }
 }
 

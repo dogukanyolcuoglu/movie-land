@@ -12,7 +12,7 @@ final class ProfileCoordinator: Coordinator, UINavigationControllerDelegate {
     let rootViewController: TabBarController!
     let rootNavigationController: UINavigationController = {
         let navVC = UINavigationController()
-        navVC.tabBarItem = UITabBarItem(title: Texts.TabBarTitle.profile, image: Images.Tabbar.person, selectedImage: Images.Tabbar.personPageSelected)
+        navVC.tabBarItem = UITabBarItem(title: Texts.TabBarTitle.favorites, image: Images.Tabbar.person, selectedImage: Images.Tabbar.personPageSelected)
         let titleBoldAttributes: [NSAttributedString.Key: Any] = [
             .font: UIFont.systemFont(ofSize: 11, weight: .bold)
         ]

@@ -10,8 +10,15 @@ import Foundation
 extension HomePageViewController: HomePageViewModelDelegate {
     
     func updated() {
-        collectionView.reloadData()
+        tableView.reloadData()
+        LoadingView.shared.hideLoaderView()
         print("updated ...")
+    }
+    
+    func didFinishError() {
+        tableView.reloadData()
+        LoadingView.shared.hideLoaderView()
+        print("error ...")
     }
     
 }

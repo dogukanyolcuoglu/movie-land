@@ -17,11 +17,10 @@ struct Texts {
     
     struct TabBarTitle {
         static let homePage = "Anasayfa"
-        static let profile = "Profil"
+        static let favorites = "Favorilerim"
     }
     
     struct InternetConnection {
-        static let title = "Bağlantı Hatası"
-        static let message = "Lütfen internet bağlantını kontrol et"
+        static let message = "Bir şeyler ters gitti!\nLütfen internet bağlantı ayarlarınızı kontrol ediniz"
     }
 }

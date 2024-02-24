@@ -17,7 +17,7 @@ class LoadingView {
     
     private lazy var transparentView: UIView = {
         let transparentView = UIView()
-        transparentView.backgroundColor = .clear
+        transparentView.backgroundColor = UIColor.black.withAlphaComponent(0.6)
         return transparentView
     }()
     
@@ -32,10 +32,10 @@ class LoadingView {
     func showLoaderView() {
         DispatchQueue.main.async {
             if !self.animationView.isAnimationPlaying {
-                guard let appDelegate = UIApplication.shared.delegate as? AppDelegate, let window = appDelegate.window else { return }
+                guard let window = AppDesign.window else { return }
                 let height = window.bounds.size.height
                 let width = window.bounds.size.width
-                self.transparentView.frame = CGRect(x: 0 ,y: 10, width: width, height: height)
+                self.transparentView.frame = CGRect(x: 0 ,y: 0, width: width, height: height)
                 self.animationView.center = self.transparentView.center
                 self.transparentView.addSubview(self.animationView)
                 window.addSubview(self.transparentView)
@@ -47,7 +47,6 @@ class LoadingView {
     func hideLoaderView() {
         DispatchQueue.main.async {
             if self.animationView.isAnimationPlaying {
-                self.animationView.animation = nil
                 self.animationView.pause()
                 self.animationView.removeFromSuperview()
                 self.transparentView.removeFromSuperview()
