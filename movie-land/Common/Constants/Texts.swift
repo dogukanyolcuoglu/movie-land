@@ -10,17 +10,20 @@ import Foundation
 struct Texts {
     
     struct Enviroment {
-        static let baseURL = URL(string: "https://movies-api14.p.rapidapi.com")!
-        static let apiKey = "3df9510d5emsh02b60408a2e095bp1e4444jsn30ebc32c0cf8"
-        static let urlString = "https://movies-api14.p.rapidapi.com"
+        static let baseURL = URL(string: "http://www.omdbapi.com")!
+        static let apiKey = "a3b1fe3c"
     }
     
     struct TabBarTitle {
         static let homePage = "Anasayfa"
+        static let favorites = "Favorilerim"
+    }
+    
+    struct HomePageText {
+        static let search = "İzlemek istediğin bir filmi arayabilirsin."
     }
     
     struct InternetConnection {
-        static let title = "Bağlantı Hatası"
-        static let message = "Lütfen internet bağlantını kontrol et"
+        static let message = "Bir şeyler ters gitti!\nLütfen internet bağlantı ayarlarınızı kontrol ediniz"
     }
 }

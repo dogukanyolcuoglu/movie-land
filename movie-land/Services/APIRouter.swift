@@ -9,9 +9,8 @@ import Foundation
 import Moya
 
 enum APIRouter {
-    case getMovies
     case getMovieById(stringId: String)
-    case getHomePageMovie
+    case searchByMovieNames(name: String)
 }
 
 extension APIRouter: TargetType {
@@ -22,43 +21,44 @@ extension APIRouter: TargetType {
     
     var path: String {
         switch self {
-        case .getMovies:
-            return "/movies"
-        case .getMovieById(let stringId):
-            return "/movie/\(stringId)"
-        case .getHomePageMovie:
-            return "/home"
+        case .getMovieById, .searchByMovieNames:
+            return ""
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .getMovies, .getMovieById, .getHomePageMovie:
+        case .getMovieById, .searchByMovieNames:
             return .get
         }
     }
     
     var parameters: [String: Any]? {
         switch self {
-        case .getMovies, .getMovieById, .getHomePageMovie:
-            return [:]
+        case .searchByMovieNames(let name):
+            let params = [
+                "apikey": Texts.Enviroment.apiKey,
+                "s": name
+            ]
+            return params
+        case .getMovieById(let id):
+            let params = [
+                "apikey": Texts.Enviroment.apiKey,
+                "i": id
+            ]
+            return params
         }
     }
     
     var task: Task {
         switch self {
-        case .getMovies, .getHomePageMovie:
-            return .requestPlain
-        case .getMovieById:
-            return .requestParameters(parameters: parameters!, encoding: URLEncoding.default)
+        case .getMovieById, .searchByMovieNames:
+            return .requestParameters(parameters: parameters!, encoding: URLEncoding.queryString)
         }
     }
     
     var headers: [String : String]? {
-        var assigned: [String: String] = [
-            "X-RapidAPI-Key": Texts.Enviroment.apiKey,
-            "X-RapidAPI-Host": Texts.Enviroment.urlString,
-        ]
+        let assigned: [String: String] = [:]
        return assigned
     }
     

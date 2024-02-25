@@ -14,6 +14,10 @@ class HomePageCoordinator: Coordinator, UINavigationControllerDelegate {
     let rootNavigationController: UINavigationController = {
         let navVC = UINavigationController()
         navVC.tabBarItem = UITabBarItem(title: Texts.TabBarTitle.homePage, image: Images.Tabbar.homePage, selectedImage: Images.Tabbar.homePageSelected)
+        let titleBoldAttributes: [NSAttributedString.Key: Any] = [
+            .font: UIFont.systemFont(ofSize: 11, weight: .bold)
+        ]
+        navVC.tabBarItem.setTitleTextAttributes(titleBoldAttributes, for: .normal)
         return navVC
     }()
     let viewModel: HomePageViewModel!
