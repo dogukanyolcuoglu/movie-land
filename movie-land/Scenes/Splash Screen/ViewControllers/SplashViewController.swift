@@ -14,17 +14,16 @@ import Signals
 class SplashViewController: BaseViewController {
     
     // MARK: - IBOutlets
-    @IBOutlet weak var animationView: LottieAnimationView!
     @IBOutlet weak var companyNameLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     // MARK: - Properties
     var viewModel: SplashViewModel!
     var coordinator: SplashCoordinator!
+    var goDashBoard = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        animationView.play()
-        animationView.loopMode = .loop
         configure()
     }
     
@@ -43,15 +42,17 @@ class SplashViewController: BaseViewController {
     }
     
     func configure() {
-        self.noInternetSucject.subscribe(with: self) { [weak self] (data) in
-            if data {
-                self?.viewModel.firebaseConfig { (title) in
-                    self?.companyNameLabel.text = title
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                        self?.coordinator.goToDashBoardPage()
-                    }
-                }
-            }
+        self.viewModel.firebaseConfig { (title) in
+            self.companyNameLabel.text = title
+            self.companyNameLabel.textAlignment = .center
+            self.descriptionLabel.text = "Devam etmek için buraya tıkla"
+            self.goDashBoard = true
+        }
+    }
+    
+    @IBAction func continueButtonClicked(_ sender: Any) {
+        if goDashBoard {
+            self.coordinator.goToDashBoardPage()
         }
     }
 }

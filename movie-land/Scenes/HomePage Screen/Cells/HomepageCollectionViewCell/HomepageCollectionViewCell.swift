@@ -16,11 +16,11 @@ class HomepageCollectionViewCell: UICollectionViewCell, Reusable {
         super.awakeFromNib()
     }
     
-    func setup(_ item: HomeMovieItem) {
-        if let path = item.image, let url = URL(string: path) {
+    func setup(_ item: Search) {
+        if let path = item.poster, let url = URL(string: path) {
             let size = self.imageView.frame.size
             self.imageView.kf.indicatorType = .activity
-            let resizeProcessor = ResizingImageProcessor(referenceSize: size, mode: .aspectFit)
+            let resizeProcessor = ResizingImageProcessor(referenceSize: size, mode: .aspectFill)
             self.imageView.kf.setImage(with: url, options: [.backgroundDecode,.processor(resizeProcessor), .scaleFactor(UIScreen.main.scale),.cacheOriginalImage]) { [weak self] (result) in
                 switch result {
                 case .success(_): break

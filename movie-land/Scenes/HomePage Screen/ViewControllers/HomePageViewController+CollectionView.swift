@@ -1,14 +1,14 @@
 //
-//  HomepageTableViewCell+Collection.swift
+//  HomePageViewController+CollectionView.swift
 //  movie-land
 //
-//  Created by Dogukan Yolcuoglu on 23.02.2024.
+//  Created by Dogukan Yolcuoglu on 25.02.2024.
 //
 
-import Foundation
 import UIKit
+import SnapKit
 
-extension HomepageTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
+extension HomePageViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     internal func collectionViewSetup() {
         registerCell()
@@ -22,30 +22,34 @@ extension HomepageTableViewCell: UICollectionViewDelegate, UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return sectionItems.count
+        if viewModel.sectionSubjects?.count ?? 0 > 0 {
+            let items = viewModel.sectionSubjects![section].items.first
+            switch items {
+            case .SearchMoviesItem(let data): return data.count
+            default: return 0
+            }
+        }
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        switch sectionItems[indexPath.row] {
-        case .AllMoviesItem(let data):
-            let cell = collectionView.dequeueReusableCell(for: indexPath, cellType: HomepageCollectionViewCell.self)
-            cell.setup(data)
-            return cell
+        let items = viewModel.sectionSubjects?[indexPath.section].items.first
+        switch items {
         case .SearchMoviesItem(let data):
             let cell = collectionView.dequeueReusableCell(for: indexPath, cellType: HomepageCollectionViewCell.self)
-            cell.setup(data)
+            cell.setup(data[indexPath.row])
             return cell
-        case .EmptySectionItem:
+        default:
             return .init()
         }
     }
 }
 
-extension HomepageTableViewCell: UICollectionViewDelegateFlowLayout {
+extension HomePageViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let perRow = 3.0
         let width = ((collectionView.bounds.size.width - 20 ) / perRow) - ((perRow - 1) * 5)
-        return CGSize(width: isHorizontal ? 120 : width, height: 160)
+        return CGSize(width: width, height: 160)
     }
 }

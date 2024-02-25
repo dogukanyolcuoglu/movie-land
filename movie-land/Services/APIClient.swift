@@ -21,7 +21,6 @@ final class APIClient {
             guard let self = self else { return }
             switch result {
             case let .success(request):
-                let httpResponse = request.response
                 self.handleResponseData(data: request.data, response: request.response, completion: completion)
             case let .failure(error):
                 completion(.failure(NetworkingError.moyaError(error)))

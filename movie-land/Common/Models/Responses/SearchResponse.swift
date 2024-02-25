@@ -2,81 +2,40 @@
 //  SearchResponse.swift
 //  movie-land
 //
-//  Created by Dogukan Yolcuoglu on 24.02.2024.
+//  Created by Dogukan Yolcuoglu on 22.02.2024.
 //
+
 
 import Foundation
 
-// MARK: - SearchMoviesResponse
-struct SearchMoviesResponse: Codable {
-    let query: String?
-    let contents: [SearchContent]?
-}
-
-// MARK: - Content
-struct SearchContent: Codable {
-    let id: Int
-    let backdropPath: String?
-    let genres: [String]?
-    let originalTitle, overview: String?
-    let posterPath: String?
-    let releaseDate: String?
-    let title: String?
-    let voteAverage: Double?
-    let voteCount: Int?
-    let youtubeTrailer: String?
-    let sources: [Source]?
-    let contentType: ContentType?
-    let firstAired: String?
+// MARK: - SearchResponse
+struct SearchResponse: Codable {
+    let search: [Search]?
+    let totalResults, response: String?
 
     enum CodingKeys: String, CodingKey {
-        case id = "_id"
-        case backdropPath = "backdrop_path"
-        case genres
-        case originalTitle = "original_title"
-        case overview
-        case posterPath = "poster_path"
-        case releaseDate = "release_date"
-        case title
-        case voteAverage = "vote_average"
-        case voteCount = "vote_count"
-        case youtubeTrailer = "youtube_trailer"
-        case sources, contentType
-        case firstAired = "first_aired"
+        case search = "Search"
+        case totalResults
+        case response = "Response"
     }
 }
 
-// MARK: - Source
-struct Source: Codable {
-    let source: String?
-    let link: String?
-    let type: TypeEnum?
-    let displayName: String?
-    let info: String?
-    let platform: Platform?
+// MARK: - Search
+struct Search: Codable {
+    let title, year, imdbID: String?
+    let type: TypeEnum
+    let poster: String?
 
     enum CodingKeys: String, CodingKey {
-        case source, link, type
-        case displayName = "display_name"
-        case info, platform
-    }
-}
-
-// MARK: - Platform
-struct Platform: Codable {
-    let android: String?
-    let androidTv: String?
-    let ios, web: String?
-
-    enum CodingKeys: String, CodingKey {
-        case android
-        case androidTv = "android_tv"
-        case ios, web
+        case title = "Title"
+        case year = "Year"
+        case imdbID
+        case type = "Type"
+        case poster = "Poster"
     }
 }
 
 enum TypeEnum: String, Codable {
-    case free = "free"
-    case purchase = "purchase"
-    case subscription = "subscription"
+    case movie = "movie"
+    case series = "series"
 }

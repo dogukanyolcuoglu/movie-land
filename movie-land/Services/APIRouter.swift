@@ -10,7 +10,6 @@ import Moya
 
 enum APIRouter {
     case getMovieById(stringId: String)
-    case getHomeMovies
     case searchByMovieNames(name: String)
 }
 
@@ -22,49 +21,44 @@ extension APIRouter: TargetType {
     
     var path: String {
         switch self {
-        case .getMovieById(let stringId):
-            return "/movie/\(stringId)"
-        case .getHomeMovies:
-            return "/home"
-        case .searchByMovieNames:
-            return "/search"
+        case .getMovieById, .searchByMovieNames:
+            return ""
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .getMovieById, .getHomeMovies, .searchByMovieNames:
+        case .getMovieById, .searchByMovieNames:
             return .get
         }
     }
     
     var parameters: [String: Any]? {
         switch self {
-        case .getHomeMovies:
-            return [:]
         case .searchByMovieNames(let name):
-            let params = ["query": name]
+            let params = [
+                "apikey": Texts.Enviroment.apiKey,
+                "s": name
+            ]
             return params
         case .getMovieById(let id):
-            let params = ["id": id]
+            let params = [
+                "apikey": Texts.Enviroment.apiKey,
+                "i": id
+            ]
             return params
         }
     }
     
     var task: Task {
         switch self {
-        case .getHomeMovies:
-            return .requestPlain
         case .getMovieById, .searchByMovieNames:
             return .requestParameters(parameters: parameters!, encoding: URLEncoding.queryString)
         }
     }
     
     var headers: [String : String]? {
-        let assigned: [String: String] = [
-            "X-RapidAPI-Key" : Texts.Enviroment.apiKey,
-            "X-RapidAPI-Host": Texts.Enviroment.host,
-        ]
+        let assigned: [String: String] = [:]
        return assigned
     }
     

@@ -10,7 +10,7 @@ import Signals
 
 class HomePageViewController: BaseViewController {
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     var viewModel: HomePageViewModel!
     var coordinator: HomePageCoordinator!
@@ -20,8 +20,7 @@ class HomePageViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = Texts.TabBarTitle.homePage
-        tableViewConfigure()
-        setupNavigationBar()
+        collectionViewSetup()
         searchBarConfig()
         setup()
     }
@@ -34,19 +33,19 @@ class HomePageViewController: BaseViewController {
     func searchBarConfig() {
         searchBar.delegate = self
         searchBar.placeholder = "Film ara..."
-        searchBar.showsCancelButton = false
         searchBar.searchTextField.delegate = self
+        self.navigationItem.titleView = searchBar
     }
     
     func setup() {
         viewModel.delegate = self
-        viewModel.getHomeMovies()
+        defineSection([])
     }
     
     func configure() {
         self.noInternetSucject.subscribe(with: self) { [weak self] (data) in
             if data {
-                self?.tableView.reloadData()
+                self?.collectionView.reloadData()
             }
         }
     }
@@ -59,39 +58,15 @@ class HomePageViewController: BaseViewController {
     deinit {
         noInternetSucject.cancelSubscription(for: self)
     }
-    
-    func setupNavigationBar() {
-        self.navigationItem.titleView = nil
-        let image = UIImage(systemName: "magnifyingglass")?.withTintColor(Colors.TabBarColors.heavyRedColor, renderingMode: .alwaysOriginal)
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(didTapSearchIcon))
-    }
-    
-    @objc func didTapSearchIcon() {
-        self.navigationItem.titleView = searchBar
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "iptal", style: .plain, target: self, action: #selector(hiddenSearchBar))
-        self.navigationItem.rightBarButtonItem?.tintColor = Colors.TabBarColors.heavyRedColor
-    }
-    
-    @objc func hiddenSearchBar() {
-        self.title = Texts.TabBarTitle.homePage
-        self.navigationItem.titleView = nil
-        self.searchBar.searchTextField.text = nil
-        setupNavigationBar()
-        viewModel.getHomeMovies()
-    }
 }
 
 extension HomePageViewController: UISearchBarDelegate, UITextFieldDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange textSearched: String) {
-        if textSearched.count >= 3 {
-            viewModel.getSearchMovies(searchKey: textSearched)
-        } else if textSearched.count == 0 {
-            viewModel.getHomeMovies()
-        }
+        viewModel.getSearchMovies(searchKey: textSearched)
     }
     
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
-        viewModel.getHomeMovies()
+        viewModel.getSearchMovies(searchKey: textField.text!)
         return true
     }
 }

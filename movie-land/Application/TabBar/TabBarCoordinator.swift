@@ -21,7 +21,7 @@ class TabbarCoordinator: Coordinator {
     
     // MARK:- Coordinators
     lazy var homePageCoordinator = HomePageCoordinator(rootViewController: tabbarController)
-    lazy var profileCoordinator = ProfileCoordinator(rootViewController: tabbarController)
+    lazy var profileCoordinator = FavoriteCoordinator(rootViewController: tabbarController)
 
     init(window: UIWindow) {
         self.window = window

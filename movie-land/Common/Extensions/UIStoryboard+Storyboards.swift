@@ -11,7 +11,7 @@ extension UIStoryboard {
     
     enum Storyboard: String {
         case splash
-        case profile
+        case favorite
         case homePage
         
         var filename: String {

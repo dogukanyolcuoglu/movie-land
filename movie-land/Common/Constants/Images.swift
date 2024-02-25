@@ -16,4 +16,12 @@ struct Images {
         static let person = UIImage(systemName: "star")?.withTintColor(.black, renderingMode: .alwaysOriginal)
         static let personPageSelected = UIImage(systemName: "star.fill")?.withTintColor(Colors.TabBarColors.heavyRedColor, renderingMode: .alwaysOriginal)
     }
+    
+    struct CommonImages {
+        static let noInternet = UIImage(named: "noInternetIcon")
+    }
+    
+    struct HomepageImages {
+        static let searchIcon = UIImage(named: "searching")
+    }
 }

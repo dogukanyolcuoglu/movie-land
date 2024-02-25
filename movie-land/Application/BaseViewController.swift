@@ -83,7 +83,7 @@ class BaseViewController: UIViewController, UINavigationControllerDelegate {
             })
             noInternetView?.descriptionLabel.text = Texts.InternetConnection.message
             noInternetView?.backgroundColor = UIColor.black.withAlphaComponent(0.6)
-            noInternetView?.imageView.image = UIImage(named: "noInternetIcon")
+            noInternetView?.imageView.image = Images.CommonImages.noInternet
             noInternetView?.setup()
         }
     }

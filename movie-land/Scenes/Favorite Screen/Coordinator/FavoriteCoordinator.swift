@@ -1,5 +1,5 @@
 //
-//  ProfileCoordinator.swift
+//  FavoriteCoordinator.swift
 //  movie-land
 //
 //  Created by Dogukan Yolcuoglu on 22.02.2024.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ProfileCoordinator: Coordinator, UINavigationControllerDelegate {
+final class FavoriteCoordinator: Coordinator, UINavigationControllerDelegate {
     
     let rootViewController: TabBarController!
     let rootNavigationController: UINavigationController = {
@@ -19,17 +19,17 @@ final class ProfileCoordinator: Coordinator, UINavigationControllerDelegate {
         navVC.tabBarItem.setTitleTextAttributes(titleBoldAttributes, for: .normal)
         return navVC
     }()
-    let storyboard = UIStoryboard(storyboard: .profile)
-    let viewModel: ProfileViewModel!
+    let storyboard = UIStoryboard(storyboard: .favorite)
+    let viewModel: FavoriteViewModel!
     
     init(rootViewController: TabBarController) {
         self.rootViewController = rootViewController
-        self.viewModel = ProfileViewModel(repository: ProfileRepository())
+        self.viewModel = FavoriteViewModel(repository: FavoriteRepository())
     }
     
     override func start() {
         rootNavigationController.delegate = self
-        let viewController: ProfileViewController = storyboard.instantiateViewController()
+        let viewController: FavoriteViewController = storyboard.instantiateViewController()
         viewController.coordinator = self
         viewController.viewModel = viewModel
         rootNavigationController.setViewControllers([viewController], animated: false)

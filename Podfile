@@ -13,4 +13,5 @@ target 'movie-land' do
   pod 'FirebaseAnalytics'
   pod 'FirebaseDatabase'
   pod 'lottie-ios'
+  pod 'IQKeyboardManager'
 end

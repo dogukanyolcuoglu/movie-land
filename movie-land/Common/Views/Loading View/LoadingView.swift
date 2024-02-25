@@ -17,7 +17,7 @@ class LoadingView {
     
     private lazy var transparentView: UIView = {
         let transparentView = UIView()
-        transparentView.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+        transparentView.backgroundColor = UIColor.black.withAlphaComponent(0)
         return transparentView
     }()
     
@@ -45,7 +45,7 @@ class LoadingView {
     }
     
     func hideLoaderView() {
-        DispatchQueue.main.async {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             if self.animationView.isAnimationPlaying {
                 self.animationView.pause()
                 self.animationView.removeFromSuperview()
