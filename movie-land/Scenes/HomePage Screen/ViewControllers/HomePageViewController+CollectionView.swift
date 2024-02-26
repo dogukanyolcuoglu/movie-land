@@ -43,6 +43,17 @@ extension HomePageViewController: UICollectionViewDelegate, UICollectionViewData
             return .init()
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let items = viewModel.sectionSubjects?[indexPath.section].items.first
+        switch items {
+        case .SearchMoviesItem(let data):
+            let item = data[indexPath.row]
+            coordinator.goToMovieDetail(id: item.imdbID ?? "")
+        default:
+            break
+        }
+    }
 }
 
 extension HomePageViewController: UICollectionViewDelegateFlowLayout {

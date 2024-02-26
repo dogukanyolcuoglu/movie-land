@@ -44,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let navigationBarAppearance = UINavigationBarAppearance()
              navigationBarAppearance.configureWithOpaqueBackground()
              navigationBarAppearance.titleTextAttributes = [
-                NSAttributedString.Key.foregroundColor : Colors.TabBarColors.heavyRedColor,
+                NSAttributedString.Key.foregroundColor : Colors.TabBarColors.movieLandColor,
                 NSAttributedString.Key.font : UIFont.systemFont(ofSize: 21, weight: .bold)
              ]
              UINavigationBar.appearance().standardAppearance = navigationBarAppearance

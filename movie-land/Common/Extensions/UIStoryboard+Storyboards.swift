@@ -13,6 +13,7 @@ extension UIStoryboard {
         case splash
         case favorite
         case homePage
+        case movieDetail
         
         var filename: String {
             return rawValue.capitalized

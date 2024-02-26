@@ -30,7 +30,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         self.delegate = self
         tabBar.barTintColor = .white
         tabBar.unselectedItemTintColor = .black
-        tabBar.tintColor = Colors.TabBarColors.heavyRedColor
+        tabBar.tintColor = Colors.TabBarColors.movieLandColor
         tabBar.shadowImage = UIImage()
         tabBar.backgroundImage = UIImage()
         tabBar.backgroundColor = .white
@@ -50,7 +50,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
             .font: UIFont.systemFont(ofSize: 11),
         ]
         
-        tabBarItemAppearance.badgeColor = Colors.TabBarColors.heavyRedColor
+        tabBarItemAppearance.badgeColor = Colors.TabBarColors.movieLandColor
         tabBarItemAppearance.setBadgeTextAttributes(titleAttributes, for: .normal)
         tabBarItemAppearance.setBadgeTextAttributes(titleAttributes, for: .selected)
         tabBarItemAppearance.setTitleTextAttributes(titleAttributes, for: .normal)

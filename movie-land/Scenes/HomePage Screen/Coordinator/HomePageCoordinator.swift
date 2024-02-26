@@ -37,4 +37,9 @@ class HomePageCoordinator: Coordinator, UINavigationControllerDelegate {
         rootViewController.viewControllers.add(element: rootNavigationController)
     }
         
+    func goToMovieDetail(id: String) {
+        let movieDetialCoordinator = MovieDetailCoordinator(rootViewController: rootNavigationController, movieID: id)
+        movieDetialCoordinator.start()
+    }
+    
 }
