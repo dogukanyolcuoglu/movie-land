@@ -10,4 +10,5 @@ import Foundation
 public enum AppViewTag: Int {
     case notInternetConnection = 10001
     case noFoundSearch = 10002
+    case noFoundFavorite = 10003
 }

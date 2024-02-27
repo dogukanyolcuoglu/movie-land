@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Signals
 
 final class MovieDetailCoordinator: Coordinator {
     
@@ -19,11 +20,11 @@ final class MovieDetailCoordinator: Coordinator {
     }
     
     override func start() {
-        let viewControoler: MovieDetailViewController = storyboard.instantiateViewController()
-        viewControoler.viewModel = viewModel
-        viewControoler.coordinator = self
-        viewControoler.hidesBottomBarWhenPushed = true
-        rootNavigationViewController.present(viewControoler, animated: true)
+        let viewController: MovieDetailViewController = storyboard.instantiateViewController()
+        viewController.viewModel = viewModel
+        viewController.coordinator = self
+        viewController.hidesBottomBarWhenPushed = true
+        rootNavigationViewController.present(viewController, animated: false)
     }
     
 }
