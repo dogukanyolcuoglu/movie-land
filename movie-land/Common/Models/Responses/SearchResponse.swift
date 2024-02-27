@@ -23,7 +23,7 @@ struct SearchResponse: Codable {
 // MARK: - Search
 struct Search: Codable {
     let title, year, imdbID: String?
-    let type: TypeEnum
+    let type: TypeEnum?
     let poster: String?
 
     enum CodingKeys: String, CodingKey {

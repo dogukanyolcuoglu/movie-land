@@ -1,14 +1,13 @@
 //
-//  HomePageViewController+CollectionView.swift
+//  FavoriteViewController+CollectionView.swift
 //  movie-land
 //
-//  Created by Dogukan Yolcuoglu on 25.02.2024.
+//  Created by Dogukan Yolcuoglu on 27.02.2024.
 //
 
 import UIKit
-import SnapKit
 
-extension HomePageViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension FavoriteViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     internal func collectionViewSetup() {
         registerCell()
@@ -56,7 +55,7 @@ extension HomePageViewController: UICollectionViewDelegate, UICollectionViewData
     }
 }
 
-extension HomePageViewController: UICollectionViewDelegateFlowLayout {
+extension FavoriteViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let perRow = 3.0

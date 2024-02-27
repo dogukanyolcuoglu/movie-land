@@ -24,7 +24,7 @@ class SplashViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configure()
+        subscribeMethod()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -47,6 +47,15 @@ class SplashViewController: BaseViewController {
             self.companyNameLabel.textAlignment = .center
             self.descriptionLabel.text = "Devam etmek için buraya tıkla"
             self.goDashBoard = true
+        }
+    }
+    
+    func subscribeMethod() {
+        self.noInternetSucject.subscribe(with: self) { [weak self] (success) in
+            guard let self else { return }
+            if success {
+                configure()
+            }
         }
     }
     

@@ -6,13 +6,14 @@
 //
 
 import UIKit
+import Signals
 
 final class FavoriteCoordinator: Coordinator, UINavigationControllerDelegate {
     
     let rootViewController: TabBarController!
     let rootNavigationController: UINavigationController = {
         let navVC = UINavigationController()
-        navVC.tabBarItem = UITabBarItem(title: Texts.TabBarTitle.favorites, image: Images.Tabbar.person, selectedImage: Images.Tabbar.personPageSelected)
+        navVC.tabBarItem = UITabBarItem(title: Texts.TabBarTitle.favorites, image: Images.Tabbar.bookMark, selectedImage: Images.Tabbar.bookMarkSelected)
         let titleBoldAttributes: [NSAttributedString.Key: Any] = [
             .font: UIFont.systemFont(ofSize: 11, weight: .bold)
         ]
@@ -34,5 +35,10 @@ final class FavoriteCoordinator: Coordinator, UINavigationControllerDelegate {
         viewController.viewModel = viewModel
         rootNavigationController.setViewControllers([viewController], animated: false)
         rootViewController.viewControllers.add(element: rootNavigationController)
+    }
+    
+    func goToMovieDetail(id: String) {
+        let movieDetialCoordinator = MovieDetailCoordinator(rootViewController: rootNavigationController, movieID: id)
+        movieDetialCoordinator.start()
     }
 }

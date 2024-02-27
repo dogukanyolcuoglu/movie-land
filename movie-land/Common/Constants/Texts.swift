@@ -16,11 +16,15 @@ struct Texts {
     
     struct TabBarTitle {
         static let homePage = "Anasayfa"
-        static let favorites = "Favorilerim"
+        static let favorites = "Kaydettiklerim"
     }
     
     struct HomePageText {
-        static let search = "İzlemek istediğin bir filmi arayabilirsin."
+        static let search = "istediğin bir filmi arayabilirsin"
+    }
+    
+    struct FavoriteText {
+        static let favorite = "Haydi! favori filmlerini oluştur"
     }
     
     struct InternetConnection {

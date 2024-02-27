@@ -10,6 +10,6 @@ import UIKit
 struct Colors {
     
     struct TabBarColors {
-        static let heavyRedColor = UIColor(red: 220 / 255, green: 43 / 255, blue: 43 / 255, alpha: 1)
+        static let movieLandColor = UIColor(red: 55 / 255, green: 55 / 255, blue: 77 / 255, alpha: 1)
     }
 }
